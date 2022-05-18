@@ -2,9 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
 
 body {
-    margin: 0px;
+    margin: 0;
     font-family: "Roboto", sans-serif;
 }
+
+main {
+    padding: 0 2%;
+}
+
 header {
     font-family: 'Shrikhand', cursive;
     text-align: center;
@@ -14,7 +19,7 @@ header {
     position: relative;
 }
 
-main .city {
+.city {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,6 +28,86 @@ main .city {
     text-align: center;
     padding: 5px
 }
-main .city i {
+
+.city i {
     font-size: 25px;
+}
+
+/* EXPLORER */
+.explorer {
+    text-align: center;
+}
+
+.explorer h2 {
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.explorer p {
+    font-size: medium;
+}
+
+.explorer button {
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    transition: transform 150ms;
+    margin-top: 20px;
+}
+
+.explorer button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+/* WORK */
+.work ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+@media (max-width: 1000px) {
+    .work ol {
+        flex-direction: column;
+    }
+}
+
+.work li {
+    display: flex;
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 2% 2%;
+    flex-grow: 1;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.work li:hover {
+    transform: scale(1.02);
+}
+
+.work li i.fa-solid {
+    margin-right: 10px;
+    color: #7e7e7e;
+
+}
+
+.work li .steps-number {
+    color: white;
+    background-color: #9356dc;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -30px;
+    top: 1px;   
 }

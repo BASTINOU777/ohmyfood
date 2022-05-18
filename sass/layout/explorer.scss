@@ -1,0 +1,29 @@
+@import "../outils/box-shadow.scss"
+.explorer {
+    text-align: center;
+
+& h2 {
+    margin-top: 30px;
+    font-size: 30px;
+}
+& p {
+    font-size: medium;
+}
+& button {
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-image: linear-gradient(to top rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+    transition: transform 150ms;
+    margin-top: 20px;
+    //box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+    // integration mixin , box-shadow
+    @include box-shadow 
+}
+& button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+}

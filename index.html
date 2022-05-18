@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oh My Food</title>
-<script src="https://kit.fontawesome.com/da50683a8d.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-<header>
-    <h1>ohmyfood</h1>
-</header>
-<main>
-    <div class="city">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/style.scss" />
+    <!-- à modifier avec le bon chemin-->
+    <title>Oh My Food</title>
+    <script
+      src="https://kit.fontawesome.com/da50683a8d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ohmyfood</h1>
+    </header>
+    <main>
+      <div class="city">
         <i class="fa-solid fa-location-dot"></i>
         <h2>Paris, Belleville</h2>
-    </div>
-</main>
-</body>
+      </div>
+<!--SECTION 1 EXPLORER -->
+      <section class="explorer">
+        <h2>Réservez le menu qui<br />vous convient</h2>
+        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+        <button>
+          Explorer nos restaurants
+          <div class="gradient"></div>
+        </button>
+      </section>
+  <!--SECTION 2 WORK -->    
+      <section class="work">
+        <h2>fonctionnement</h2>
+        <ol>
+          <li>
+            <span class="steps-number">1</span>
+            <i class="fa-solid fa-mobile-screen"></i>choisissez un restaurant
+          </li>
+          <li>
+            <span class="steps-number">2</span>
+            <i class="fa-solid fa-list-ul"></i>composez votre menu
+          </li>
+          <li>
+            <span class="steps-number">3</span>
+            <i class="fa-solid fa-store"></i>degustez au restaurant
+          </li>
+        </ol>
+      </section>
+    </main>
+  </body>
 </html>
+
+<!--
+    1) intégrer le html (index puis les 4 restaurants)
+    2) commencer le css
+    3) commencer le sass ( à minima couleurs, police, etc...)
+    4) les animations pour la fin
+-->

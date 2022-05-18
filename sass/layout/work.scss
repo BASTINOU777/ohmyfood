@@ -1,0 +1,20 @@
+.work{
+& ol  {
+    display: flex;
+    gap: 10px;
+@media (max-width: 768px){   
+    flex-direction: column;
+   }
+}
+& li {
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 1% 2%;
+    flex-grow: 1;
+    border-radius: 10px;
+    box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+& :hover {
+    transform: scale(1.02);
+}
+}
