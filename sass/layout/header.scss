@@ -1,8 +1,35 @@
+@use "../utils/mixins.scss";
+
 header {
-    font-family: 'Shrikhand', cursive;
-    text-align: center;
-    box-shadow: 0px 0px 5px grey;
-    padding: 3px;
-    margin: 0;
-    position: relative;
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0px 0px 5px grey;
+  padding: 3px;
+  margin: 0;
+  position: relative;
+  width: 103%;
+  cursor: pointer;
+ 
+
+  & i {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+  }
+  ::before {
+    @include mixins.fontawesome(700);
+    content: "\f060";
+    left: 30px;
+    top: 36px;
+    font-size: x-large;
+  }
+}
+
+#page-resto1 a {
+  text-decoration: none;
+  color: black;
 }

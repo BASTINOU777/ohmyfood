@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./sass/style.scss" />
-    <!-- à modifier avec le bon chemin-->
+    <link rel="stylesheet" href="./style.scss" />
     <title>Oh My Food</title>
     <script
       src="https://kit.fontawesome.com/da50683a8d.js"
@@ -13,7 +12,15 @@
     ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="homepage">
+   <div class="loader">
+      <div class="loader_itemContainer">
+        <div class="loader_item loader_item-1"></div>
+        <div class="loader_item loader_item-2"></div>
+        <div class="loader_item loader_item-3"></div>
+      </div>
+    </div>
+    
     <header>
       <h1>ohmyfood</h1>
     </header>
@@ -22,16 +29,16 @@
         <i class="fa-solid fa-location-dot"></i>
         <h2>Paris, Belleville</h2>
       </div>
-<!--SECTION 1 EXPLORER -->
+      <!--SECTION 1 EXPLORER -->
       <section class="explorer">
         <h2>Réservez le menu qui<br />vous convient</h2>
         <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
         <button>
-          Explorer nos restaurants
+          Explorer nos restaurants</button>
           <div class="gradient"></div>
-        </button>
+        
       </section>
-  <!--SECTION 2 WORK -->    
+      <!--SECTION 2 WORK -->
       <section class="work">
         <h2>fonctionnement</h2>
         <ol>
@@ -45,17 +52,74 @@
           </li>
           <li>
             <span class="steps-number">3</span>
-            <i class="fa-solid fa-store"></i>degustez au restaurant
+            <i class="fa-solid fa-store"></i>dégustez au restaurant
           </li>
         </ol>
       </section>
+      <!--SECTION 3 MENUS-->
+      <section class="menus">
+        <h2>restaurants</h2>
+        <div class="menus_cards">
+          <a href="./pages_restaurants/restaurant-1.html" class="card">
+            <div class="btn_card">
+              <span class="new"> Nouveau </span>
+            </div>
+            <div class="card_image card_image-1"></div>
+            <div class="card_description">
+              <h3>la palette du goût</h3>
+              <p>Ménilmontant</p>
+            </div>
+          </a>
+
+          <a href="#" class="card">
+            <div class="btn_card">
+              <span class="new"> Nouveau </span>
+            </div>
+            <div class="card_image card_image-2"></div>
+            <div class="card_description">
+              <h3>La note enchantée</h3>
+              <p>Charonne</p>
+            </div>
+          </a>
+
+          <a href="#" class="card">
+            <div class="btn_card">
+              <span class="new"> Nouveau </span>
+            </div>
+            <div class="card_image card_image-3"></div>
+            <div class="card_description">
+              <h3>À la française</h3>
+              <p>Cité Rouge</p>
+            </div>
+          </a>
+          <a href="#" class="card">
+            <div class="btn_card">
+              <span class="new"> Nouveau </span>
+            </div>
+            <div class="card_image card_image-4"></div>
+            <div class="card_description">
+              <h3>Le délice des sens</h3>
+              <p>Folie-Méricourt</p>
+            </div>
+          </a>
+        </div>
+      </section>
     </main>
+    <footer>
+      <h2>ohmyfood</h2>
+      <p>
+        <i class="fa-solid fa-utensils"></i>
+        Proposer un restaurant
+      </p>
+      <p>
+        <i class="fa-solid fa-handshake-angle"></i>
+        Devenir partenaire
+      </p>
+      <p>Mentions légales</p>
+      <p>
+        <a href="mailto:bastien.aviles@gmail.com">Contact</a>
+      </p>
+    </footer>
   </body>
 </html>
 
-<!--
-    1) intégrer le html (index puis les 4 restaurants)
-    2) commencer le css
-    3) commencer le sass ( à minima couleurs, police, etc...)
-    4) les animations pour la fin
--->

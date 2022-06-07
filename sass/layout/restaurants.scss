@@ -1,0 +1,76 @@
+@use "../utils/mixins.scss";
+@use "../utils/colors.scss";
+
+.image_resto-1 img {
+  display: block;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.container_menu_resto-1 h2 {
+  font-family: "shrikhand", "sans-serfif";
+  padding: 20px 0 10px 30px;
+  position: relative;
+}
+
+.heart .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(
+    #9356dc,
+    #b35cdc,
+    #cf64dc,
+    #e86edb,
+    #ff79da
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 250ms;
+  :hover {
+    opacity: 1;
+  }
+}
+
+.heart i {
+  font-size: 24px;
+  position: absolute;
+  right: 200px;
+  top: 650px;
+}
+
+.container_menu_resto-1 {
+  margin-top: -60px;
+  position: absolute;
+  background-color: #f3f3f3;
+  border-radius: 33px 33px 0 0;
+}
+
+.menus_resto-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 11px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+.menu-item {
+  background-color: white;
+  display: flex;
+
+  .price {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  .div-menu1 h4,
+  p {
+    padding: 0%;
+    margin: 0%;
+  }
+  .menu-item_check {
+    background-color: colors.$tertaire-colors;
+  }
+  & > * {
+    border: 1px red;
+  }
+}

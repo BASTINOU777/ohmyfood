@@ -1,0 +1,53 @@
+@mixin box-shadow {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@mixin hover {
+  transform: scale(1.02);
+}
+@mixin heart($font-weight: 400, $color: black, $opacity: 1, $right: 16px, $top: 18px) {
+  @include fontawesome ($font-weight);
+  content: "\f004";
+  font-size: 24px;
+  position: absolute;
+  right: $right;
+  top: $top;
+  color: $color;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: $opacity;
+  transition: all 250ms;
+}
+
+@mixin button {
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to top,
+    rgba(147, 86, 220),
+    rgba(255, 121, 218)
+  );
+  transition: transform 150ms;
+  margin-top: 20px;
+  
+  &:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+    cursor: pointer;
+    
+  
+}
+}
+@mixin fontawesome ($font-weight: 400){
+  display: inline-block;
+  position:absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: $font-weight;
+  
+}

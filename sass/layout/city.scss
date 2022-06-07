@@ -3,10 +3,11 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #f3f3f3;
+    background-color: #E3E3E3;
     text-align: center;
-    padding: 5px
-    & i {
+    padding: 5px 1px 4px 22px;
+    width: 100%;
+  & i {
     font-size: 25px;
-}
+  }
 }

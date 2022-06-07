@@ -1,0 +1,107 @@
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+@use "../utils/mixins.scss";
+#homepage {
+  .menus {
+    background-color: #f3f3f3;
+    margin-top: 40px;
+    padding-bottom: 140px;
+    width: 102%;
+    h2 {
+      margin-top: 20px;
+      padding: 40px 0 0 20px;
+    }
+
+    .menus_cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px 10px;
+      @media (max-width: 768px) {
+        .menus .menus_cards {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 90px;
+        }
+      }
+      .new {
+        position: absolute;
+        height: 37px;
+        width: 96px;
+        background-color: colors.$tertaire-colors;
+        color: #489685;
+        display: grid;
+        place-items: center;
+        right: 70px;
+        top: 24px;
+      }
+      .new::before {
+        background-color: colors.$tertaire-colors;
+      }
+      .btn_card {
+        position: relative;
+      }
+    }
+    .card {
+      height: 250px;
+      width: 100%;
+      text-decoration: none;
+      list-style: none;
+      &_image {
+        height: 100%;
+        width: 90%;
+        background-size: cover;
+        border-radius: 25px 25px 0 0;
+        margin: 0 10px 0 10px;
+      }
+      @for $i from 1 through 4 {
+        &_image-#{$i} {
+          background-image: url(../../images/menu_#{$i}.jpg);
+        }
+      }
+    }
+    .card_description {
+      color: black;
+      position: relative;
+      background-color: white;
+      border-radius: 0 0 25px 25px;
+      margin: 0 10px 0 10px;
+      width: 90%;
+    
+
+      &::before {
+        @include mixins.heart;
+        :hover::after {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+    
+      }
+      &::after {
+        @include mixins.heart(
+          $font-weight: 900,
+          $color: transparent,
+          $opacity: 0
+        );
+        background-image: linear-gradient(
+          #9356dc,
+          #b35cdc,
+          #cf64dc,
+          #e86edb,
+          #ff79da
+        );
+      }
+      & >:hover::after {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+      h3 {
+        margin: 0px 0 0 14px;
+        padding-top: 15px;
+      }
+      p {
+        margin: 0 0 10px 14px;
+        padding-bottom: 17px;
+      }
+    }
+  }
+}

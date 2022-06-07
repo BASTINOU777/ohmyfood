@@ -1,29 +1,150 @@
-@import "../outils/box-shadow.scss"
-.explorer {
-    text-align: center;
+@use "../utils/mixins.scss";
 
-& h2 {
+.explorer {
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 30px 23px 55px 0px;
+  width: 100%;
+
+  & h2 {
     margin-top: 30px;
     font-size: 30px;
-}
-& p {
+  }
+  & p {
     font-size: medium;
+  }
+  & button {
+    @include mixins.button;
+    @include mixins.box-shadow;
+  }
 }
-& button {
-    color: white;
-    font-size: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-image: linear-gradient(to top rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-    transition: transform 150ms;
-    margin-top: 20px;
-    //box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;;
-    // integration mixin , box-shadow
-    @include box-shadow 
+.loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ffff;
+  opacity: 70%;
+  animation: cut 3s;
+  animation-fill-mode: forwards;
+  &_item {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    animation: jump 1s;
+    animation-iteration-count: 1;
+    &Container {
+      display: flex;
+      width: 60px;
+      justify-content: space-between;
+    }
+    &-1 {
+      background-color: #9356dc;
+    }
+    &-2 {
+      background-color: #ff79da;
+      animation-delay: 0.25s;
+    }
+
+    &-3 {
+      background-color: #99e2d0;
+      animation-delay: 0.5s;
+    }
+  }
 }
-& button:hover {
-    transform: scale(1.02);
-    opacity: 0.9;
+
+@keyframes cut {
+  0% {
+    opacity: (1);
+  }
+  100% {
+    opacity: (0);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#homepage{ 
+.loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ffff;
+  opacity: 70%;
+  animation: cut 3s;
+  animation-fill-mode: forwards;
+  &_item {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    animation: jump 1s;
+    animation-iteration-count: 1;
+    &Container {
+      display: flex;
+      width: 60px;
+      justify-content: space-between;
+    }
+    &-1 {
+      background-color: #9356dc;
+    }
+    &-2 {
+      background-color: #ff79da;
+      animation-delay: 0.25s;
+    }
+
+    &-3 {
+      background-color: #99e2d0;
+      animation-delay: 0.5s;
+    }
+  }
+}
+
+@keyframes cut {
+  0% {
+    opacity: (1);
+  }
+  100% {
+    opacity: (0);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 }

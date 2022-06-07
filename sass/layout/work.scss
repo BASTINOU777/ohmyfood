@@ -1,20 +1,48 @@
-.work{
-& ol  {
+@use "../utils/mixins.scss";
+@use "../utils/colors.scss";
+
+.work {
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+  }
+  & ol {
     display: flex;
-    gap: 10px;
-@media (max-width: 768px){   
-    flex-direction: column;
-   }
-}
-& li {
+    gap: 23px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  & li {
+    position: relative;
     list-style-type: none;
-    background-color: #f6f6f6;
-    padding: 1% 2%;
+    background-color: #f3f3f3;
+    padding: 30px 0 0 10px;
     flex-grow: 1;
     border-radius: 10px;
-    box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-& :hover {
-    transform: scale(1.02);
-}
+    margin-right: 20px;
+    @include mixins.box-shadow;
+    .steps-number {
+      color: white;
+      background-color: colors.$purple;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: -16px;
+      top: 27px;
+    }
+    &:hover {
+      @include mixins.hover;
+    }
+  }
+  & i.fa-solid {
+    margin: 0 30px 30px 30px;
+    font-size: 20px;
+    color: colors.$lightgrey;
+  }
 }
