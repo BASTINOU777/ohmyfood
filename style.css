@@ -227,7 +227,7 @@ header ::before {
   display: flex;
   gap: 23px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .work ol {
     flex-direction: column;
   }
@@ -257,6 +257,10 @@ header ::before {
 }
 .work li:hover {
   transform: scale(1.02);
+  background-color: #e4d5f6;
+}
+.work li:hover i::before {
+  color: #9356dc;
 }
 .work i.fa-solid {
   margin: 0 30px 30px 30px;
@@ -277,16 +281,15 @@ header ::before {
 #homepage .menus .menus_cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px 10px;
+  gap: 134px 0px;
 }
-@media (max-width: 768px) {
-  #homepage .menus .menus_cards .menus .menus_cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 90px;
+@media screen and (max-width: 1000px) {
+  #homepage .menus .menus_cards {
+    grid-template-columns: 1fr;
+    gap: 100px;
   }
 }
-#homepage .menus .menus_cards .new {
+#homepage .menus .new {
   position: absolute;
   height: 37px;
   width: 96px;
@@ -294,49 +297,59 @@ header ::before {
   color: #489685;
   display: grid;
   place-items: center;
-  right: 70px;
+  right: 59px;
   top: 24px;
 }
-#homepage .menus .menus_cards .new::before {
+@media screen and (max-width: 1000px) {
+  #homepage .menus .new {
+    right: 93px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #homepage .menus .new {
+    right: 47px;
+  }
+}
+#homepage .menus .new::before {
   background-color: #99e2d0;
 }
-#homepage .menus .menus_cards .btn_card {
+#homepage .menus .btn_card {
   position: relative;
 }
-#homepage .menus .card {
+#homepage .card {
   height: 250px;
   width: 100%;
   text-decoration: none;
   list-style: none;
 }
-#homepage .menus .card_image {
+#homepage .card_image {
   height: 100%;
   width: 90%;
   background-size: cover;
   border-radius: 25px 25px 0 0;
-  margin: 0 10px 0 10px;
+  margin: 0 0 0 20px;
 }
-#homepage .menus .card_image-1 {
+#homepage .card_image-1 {
   background-image: url(../../images/menu_1.jpg);
 }
-#homepage .menus .card_image-2 {
+#homepage .card_image-2 {
   background-image: url(../../images/menu_2.jpg);
 }
-#homepage .menus .card_image-3 {
+#homepage .card_image-3 {
   background-image: url(../../images/menu_3.jpg);
 }
-#homepage .menus .card_image-4 {
+#homepage .card_image-4 {
   background-image: url(../../images/menu_4.jpg);
 }
-#homepage .menus .card_description {
+#homepage .card_description {
   color: black;
   position: relative;
   background-color: white;
   border-radius: 0 0 25px 25px;
-  margin: 0 10px 0 10px;
+  margin: 0px 0 0 20px;
   width: 90%;
 }
-#homepage .menus .card_description::before {
+#homepage .card_description::before {
   display: inline-block;
   position: absolute;
   font-style: normal;
@@ -355,12 +368,16 @@ header ::before {
   -webkit-background-clip: text;
   opacity: 1;
   transition: all 250ms;
+  padding-right: 15px;
 }
-#homepage .menus .card_description::before :hover::after {
-  opacity: 1;
+#homepage .card_description::after {
+  opacity: 0;
+  color: transparent;
+  font-weight: 900;
+}
+#homepage .card_description:hover::after {
   transform: scale(1.2);
-}
-#homepage .menus .card_description::after {
+  background-image: linear-gradient(#9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   display: inline-block;
   position: absolute;
   font-style: normal;
@@ -372,24 +389,19 @@ header ::before {
   content: "\f004";
   font-size: 24px;
   position: absolute;
-  right: 16px;
+  right: 31px;
   top: 18px;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 250ms;
-  background-image: linear-gradient(#9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-}
-#homepage .menus .card_description > :hover::after {
   opacity: 1;
-  transform: scale(1.2);
+  transition: all 250ms;
 }
-#homepage .menus .card_description h3 {
+#homepage h3 {
   margin: 0px 0 0 14px;
   padding-top: 15px;
 }
-#homepage .menus .card_description p {
+#homepage p {
   margin: 0 0 10px 14px;
   padding-bottom: 17px;
 }
@@ -409,6 +421,7 @@ footer a {
   color: white;
   text-decoration: none;
   margin: 0;
+  list-style: none;
 }
 footer p {
   padding: 4px 20px;
