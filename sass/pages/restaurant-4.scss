@@ -3,14 +3,14 @@
 @use "../utils/colors.scss";
 @use "../utils/animations.scss";
 
-#page-resto1 {
-  .image_resto-1 img {
+#page-resto4 {
+  .image_resto-4 img {
     width: 100%;
     height: 60%;
     object-fit: cover;
     object-position: center bottom;
   }
-  .container_menu_resto-1 {
+  .container_menu_resto-4 {
     margin-top: -60px;
     background-color: colors.$superlightgrey;
     & h2 {
@@ -45,7 +45,7 @@
       }
     }
   }
-  .menus_resto-1 {
+  .menus_resto-4 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: end;
@@ -127,7 +127,7 @@
       cursor: pointer;
       .menu-item_check {
         margin-right: 0;
-        transition: margin-right 2s;
+        transition: margin-right 1s;
       }
       i {
         @include animations.approved;
