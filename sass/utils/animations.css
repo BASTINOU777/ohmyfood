@@ -4,11 +4,6 @@
             transform: translateY(-50%);
     opacity: 0;
   }
-  50% {
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%);
-    opacity: 0,50;
-  }
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -20,11 +15,6 @@
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     opacity: 0;
-  }
-  50% {
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%);
-    opacity: 0,50;
   }
   100% {
     -webkit-transform: translateY(0);
