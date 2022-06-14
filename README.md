@@ -25,7 +25,7 @@ Recommandées: Sass en utilisant les MIXINS et VARIABLES.
     width: 250px;
 }
 
-![maquetteohmyfood](https://user.oc-static.com/upload/2020/08/24/15982605908418_Maquettes%20Ohmyfood.jpg)
+![maquetteohmyfood](https://user-images.githubusercontent.com/101596380/173565354-92809283-20e3-4f7f-a6f1-690b2ce4e428.jpeg)
 
 
 
