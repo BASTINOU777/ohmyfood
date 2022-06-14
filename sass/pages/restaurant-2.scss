@@ -13,6 +13,9 @@
   .container_menu_resto-2 {
     margin-top: -175px;
     background-color: colors.$superlightgrey;
+    z-index: 1;
+    position: relative;
+    border-radius: 20px;
     & h2 {
       position: relative;
       font-family: "shrikhand", "sans-serfif";
@@ -47,7 +50,7 @@
   }
   .menus_resto-2 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 4fr);
     align-items: end;
     gap: 15px;
     padding-left: 13px;

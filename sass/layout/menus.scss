@@ -63,7 +63,7 @@
       }
       @for $i from 1 through 4 {
         &_image-#{$i} {
-          background-image: url(../../images/menu_#{$i}.jpg);
+          background-image: url(././images/menu_#{$i}.jpg);
         }
       }
     }
