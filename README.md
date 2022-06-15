@@ -17,13 +17,10 @@ Autorisés: HTML / CSS / Sass
 Recommandées: Sass en utilisant les MIXINS et VARIABLES.  
 
 ---
-<img class="capture-ecran"
-     src="/Users/bastienaviles/Documents/openclassrooms/projet 3/ohmyfood/images/Capture d’écran ohmyfood_homepage.png"
-     alt="Capture décran du site OhMyFood"></img>
 
-.capture-ecran {
-    width: 250px;
-}
+
+
+
 
 
 
