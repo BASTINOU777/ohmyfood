@@ -10,7 +10,7 @@ En plus des systèmes classiques de réservation, les clients pourront composer 
 Intégrer puis de dynamiser plusieurs pages web avec des animations CSS en utilisant le préprocesseur Sass.
 
 
-Technologies pour réaliser le projet
+## Technologies pour réaliser le projet
 
 Autorisés: HTML / CSS / Sass
 
